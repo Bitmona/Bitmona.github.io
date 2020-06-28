@@ -3,7 +3,7 @@
     <head>
 <title>Internet Page</title>
     </head>
-    <body onload=" document.getElementById('home').style = 'background-color: #109c3f;'">
+    <body onload=" document.getElementById('home').style = 'background-color: #109c3f;'; document.getElementById('section').style = 'opacity: 0;'">
        
 
     <ul class="te">
@@ -18,6 +18,10 @@
 </section>
 <style>
          @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+          
+          body {
+            margin: 0;
+          }
           html {
               font-size: 25px;
               font-family: 'Open Sans', sans-serif;
@@ -29,7 +33,7 @@
             overflow: hidden;
             background-color: #2bbd5c;
       cursor: default;
-           
+           width: 100vw;
           }
           
           .ch a {
@@ -42,10 +46,11 @@
 }
 
 .ch a:hover {
-    background-color: #109c3f;
+    background: #109c3f;
   color: white;
   font-weight: bolder;
-  text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+  transition: background 0.3s ease;
+  
   cursor: pointer;
 }
 .ch a:active {
@@ -63,36 +68,42 @@
   float: none;
 }
 
-
-
-
 </style>   
 
 <script>
 
 
 function home() {
+  document.getElementById("section").style = "opacity: 0;"
+
     document.getElementById("section").innerHTML = ""
    
    //Style
     document.getElementById("web").style = "background-color: 2bbd5c;"
+    document.getElementById("section").style = "opacity: 1; transition:all 1s ease;"
     document.getElementById("unity").style = "background-color: 2bbd5c;"
     document.getElementById("home").style = "background-color: #109c3f;"
 }
 function web() {
+  document.getElementById("section").style = " opacity: 0;"
+
     document.getElementById("section").innerHTML = "<h1>Check back soon for <em style='text-decoration: underline;'>"+document.getElementById('web').innerText +"</em>.</h1>"
 
 //Style
 document.getElementById("web").style = "background-color: #109c3f;"
+document.getElementById("section").style = " opacity: 1; transition:all 1s ease;"
 document.getElementById("home").style = "background-color: 2bbd5c;"
 document.getElementById("unity").style = "background-color: 2bbd5c;"
 
 }
 function unity() {
-    document.getElementById("section").innerHTML = "<h1>Check back soon for <em style='text-decoration: underline;'>"+document.getElementById('unity').innerText +"</em>.</h1>"
+  document.getElementById("section").style = " opacity: 0;"
 
+    document.getElementById("section").innerHTML = "<h1>Check back soon for <em style='text-decoration: underline;'>"+document.getElementById('unity').innerText +"</em>.</h1>"
+   
 // Style
     document.getElementById("unity").style = "background-color: #109c3f;"
+    document.getElementById("section").style = " opacity: 1; transition:all 1s ease;"
     document.getElementById("home").style = "background-color: 2bbd5c;"
 document.getElementById("web").style = "background-color: 2bbd5c;"
 }
