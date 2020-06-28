@@ -3,13 +3,16 @@
     <head>
 <title>Internet Page</title>
     </head>
-    <body>
+    <body onload=" document.getElementById('home').style = 'background-color: #109c3f;'">
        
 
     <ul class="te">
-        <li class="ch" onclick="home()"><a>Home</a></li>
-        <li class="ch" onclick="unity()"><a>Unity Projects</a></li>
-        <li class="ch" onclick="web()"><a>Websites</a></li>
+        <li class="ch" onclick="home()" style="float: left;"><a id="home">Home</a></li>
+        <li class="ch"  onclick="unity()" style="float: left;"><a id="unity">Unity Projects</a></li>
+        <li class="ch"  onclick="web()" style="float: left;"><a id="web">Websites</a></li>
+          <li class="cha" style="float: right;"><a>ALEXBROWN.ORG</a></li>
+
+
 </ul>
 <section id="section">
 </section>
@@ -25,15 +28,17 @@
             padding: 0;
             overflow: hidden;
             background-color: #2bbd5c;
-            display: flex;
+      cursor: default;
+           
           }
           
           .ch a {
-  display: inline-block;
+  display: block;
   color: white;
   padding: 8px 16px;
   text-decoration: none;
   margin: 0;
+  
 }
 
 .ch a:hover {
@@ -41,19 +46,55 @@
   color: white;
   font-weight: bolder;
   text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+  cursor: pointer;
 }
+.ch a:active {
+    background-color: #109c3f;
+  color: white;
+  
+}
+.cha a{
+    display:inline-block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: underline;
+  margin: 0;
+
+  float: none;
+}
+
+
+
 
 </style>   
 
 <script>
+
+
 function home() {
     document.getElementById("section").innerHTML = ""
+   
+   //Style
+    document.getElementById("web").style = "background-color: 2bbd5c;"
+    document.getElementById("unity").style = "background-color: 2bbd5c;"
+    document.getElementById("home").style = "background-color: #109c3f;"
 }
 function web() {
-    document.getElementById("section").innerHTML = "<h1>Check back soon for <em style='text-decoration: underline;'>WEBSITES</em>.</h1>"
+    document.getElementById("section").innerHTML = "<h1>Check back soon for <em style='text-decoration: underline;'>"+document.getElementById('web').innerText +"</em>.</h1>"
+
+//Style
+document.getElementById("web").style = "background-color: #109c3f;"
+document.getElementById("home").style = "background-color: 2bbd5c;"
+document.getElementById("unity").style = "background-color: 2bbd5c;"
+
 }
 function unity() {
-    document.getElementById("section").innerHTML = "<h1>Check back soon for <em style='text-decoration: underline;'>UNITY PROJECTS</em>.</h1>"
+    document.getElementById("section").innerHTML = "<h1>Check back soon for <em style='text-decoration: underline;'>"+document.getElementById('unity').innerText +"</em>.</h1>"
+
+// Style
+    document.getElementById("unity").style = "background-color: #109c3f;"
+    document.getElementById("home").style = "background-color: 2bbd5c;"
+document.getElementById("web").style = "background-color: 2bbd5c;"
 }
 </script>
 </body>
