@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Internet Page</title>
+    </head>
+    <body>
+       
+
+    <ul class="te">
+        <li class="ch" onclick="home()"><a>Home</a></li>
+        <li class="ch" onclick="unity()"><a>Unity Projects</a></li>
+        <li class="ch" onclick="web()"><a>Websites</a></li>
+</ul>
+<section id="section">
+</section>
+<style>
+         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+          html {
+              font-size: 25px;
+              font-family: 'Open Sans', sans-serif;
+          }
+          .te {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #2bbd5c;
+            display: flex;
+          }
+          
+          .ch a {
+  display: inline-block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 0;
+}
+
+.ch a:hover {
+    background-color: #109c3f;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+}
+
+</style>   
+
+<script>
+function home() {
+    document.getElementById("section").innerHTML = ""
+}
+function web() {
+    document.getElementById("section").innerHTML = "<h1>Check back soon for <em style='text-decoration: underline;'>WEBSITES</em>.</h1>"
+}
+function unity() {
+    document.getElementById("section").innerHTML = "<h1>Check back soon for <em style='text-decoration: underline;'>UNITY PROJECTS</em>.</h1>"
+}
+</script>
+</body>
+</html>
