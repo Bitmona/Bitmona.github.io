@@ -5,7 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body onload="document.getElementById('home').style = 'background-color: #109c3f;'; document.getElementById('section').style = 'opacity: 0;'">
+    <body onload="document.getElementById('home').style = 'background-color: #109c3f;'; document.getElementById('section').style = 'opacity: 0;'; home() ">
        
     <ul class="te" id="tes">
         <li class="ch" onclick="home()" style="float: left;"><a  class="as" id="home">Home</a></li>
@@ -74,7 +74,7 @@
 function home() {
   document.getElementById("section").style = "opacity: 0;"
 
-    document.getElementById("section").innerHTML = ""
+    document.getElementById("section").innerHTML = "<h1 style='text-align: center;'>Visit the <em onclick='web()' style='text-decoration: underline; color: #2bbd5c;'>WEBSITES</em> tab to play <em style='text-decoration: underline;'>SCATTERGORIES</em>.</h1>"
    
    //Style
     document.getElementById("web").style = "background-color: 2bbd5c;"
@@ -83,9 +83,8 @@ function home() {
     document.getElementById("home").style = "background-color: #109c3f;"
 }
 function web() {
-  document.getElementById("section").style = " opacity: 0;"
-
-   document.getElementById("section").innerHTML = "<h1 style='text-align: center; overflow:hidden; overflow-y:hidden;'>Check back soon for <em style='text-decoration: underline;'>"+document.getElementById('web').innerText +"</em>.</h1>"
+  document.getElementById("section").style = "opacity: 0;" 
+ document.getElementById("section").innerHTML = "<h1 style='text-align: center; overflow:hidden; overflow-y:hidden;'>Scattergories</h1><center><iframe src='https://boardgames.glitch.me' width='1000px' height='500px' style='margin: 0;'></iframe></center>"
 //Style
 document.getElementById("web").style = "background-color: #109c3f;"
 document.getElementById("section").style = " opacity: 1; transition:all 1s ease;"
