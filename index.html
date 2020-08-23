@@ -1,111 +1,116 @@
 <!DOCTYPE html>
 <html>
-    <head>
-<title>Internet Page</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body onload="document.getElementById('home').style = 'background-color: #109c3f;'; document.getElementById('section').style = 'opacity: 0;'; home() ">
-       
-    <ul class="te" id="tes">
-        <li class="ch" onclick="home()" style="float: left;"><a  class="as" id="home">Home</a></li>
-        <li class="ch"  onclick="unity()" style="float: left;"><a class="as" id="unity">Unity Projects</a></li>
-        <li class="ch"  onclick="web()" style="float: left;"><a class="as" id="web">Websites</a></li>
-          <li class="cha" id="cha" style="float: right;"><a>ALEXBROWN.ORG</a></li>
+
+<head>
+  <title>Internet Page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body onload="document.getElementById('home').style = 'background-color: #109c3f';">
+
+  <ul class="te" id="tes">
+    <li class="ch" onclick="home()" style="float: left;background-color: #109c3f;"><a class="as" id="home" href="/">Home</a></li>
+    <li class="ch" onclick="unity()" style="float: left;"><a class="as" id="unity" href="unity">Unity Projects</a></li>
+    <li class="ch" onclick="web()" style="float: left;"><a class="as" id="web" href="web">Websites</a></li>
+    <li class="cha" id="cha" style="float: right; padding-right: 1%;"><a href="https://alexbrown.org">ALEXBROWN.ORG</a></li>
 
 
-</ul>
-<section id="section">
-</section>
-<style>
-         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-          
-          body {
-            margin: 0;
-          }
-          html {
-              font-size: 25px;
-              font-family: 'Open Sans', sans-serif;
-          }
-          .te {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #2bbd5c;
+  </ul>
+  <section id="section">
+    <h1 style='text-align: center; text-decoration: underline;'>Long-Term Projects</h1>
+    <p style="text-align: center; font-size: 23px; color:#2bbd5c;"><a href="https://badjokes.zone">BadJokes.zone</a></p>
+    <p style="text-align: center; font-size: 18px; margin-top: -10px;">Jokes so bad you might just laugh!</p>
+    <p style="text-align: center; font-size: 15px; margin-top: -5px;">BadJokes.zone is my user collected joke database.
+      This was my first project. <br> This site will continue to run and all features will be <strong>completely
+        free</strong>. You can view our complete joke list below.</p>
+    <div style="text-align: center;"><iframe src="https://badjokes.zone/all" width="70%" height="400px" style="border:none;"></iframe></div><center></center>
+    <hr style="border-top: 8px solid #000000; border-radius: 5px;" width="90%">
+    <p style="text-align: center; font-size: 23px; color:#2bbd5c;"><a href="https://badjokes.zone">Fools' Guide</a></p>
+    <p style="text-align: center; font-size: 18px; margin-top: -10px;">Name pending.</p>
+    <p style="text-align: center; font-size: 15px; margin-top: -5px; padding-bottom: 50%">This site will allow users to quickly find guides
+      for their problem. <br> Then take them through a step by step process that changes based on what happens to the
+      user's device. <br> This site is not yet released, in very early development and will not release till the end of
+      2020 earliest.</p>
+
+  </section>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    body {
+      margin: 0;
+    }
+
+    html {
+      font-size: 25px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .te {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #2bbd5c;
       cursor: default;
-           width: 100vw;
-          }
-          
-          .ch a {
-  display: block;
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-  
-  
-}
+      width: 100vw;
+    }
 
-.ch a:hover {
-    background: #109c3f;
-  color: white;
-  font-weight: bolder;
-  transition: background 0.3s ease;
-  
-  cursor: pointer;
-}
-
-.cha a{
-    display:inline-block;
-  color: white;
-  padding: 8px 16px;
-  text-decoration: underline;
-  margin: 0;
-
-  float: none;
-}
+    .ch a {
+      display: block;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
 
 
-</style>   
+    }
 
-<script>
+    .ch a:hover {
+      background: #109c3f;
+      color: white;
+      font-weight: bolder;
+      transition: background 0.3s ease;
 
+      cursor: pointer;
+    }
 
-function home() {
-  document.getElementById("section").style = "opacity: 0;"
+    .cha a {
+      display: inline-block;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: underline;
+      margin: 0;
 
-    document.getElementById("section").innerHTML = "<h1 style='text-align: center;'>Visit the <em onclick='web()' style='text-decoration: underline; color: #2bbd5c;'>WEBSITES</em> tab to play <em style='text-decoration: underline;'>SCATTERGORIES</em>.</h1>"
-   
-   //Style
-    document.getElementById("web").style = "background-color: 2bbd5c;"
-    document.getElementById("section").style = "opacity: 1; transition:all 1s ease;"
-    document.getElementById("unity").style = "background-color: 2bbd5c;"
-    document.getElementById("home").style = "background-color: #109c3f;"
-}
-function web() {
-  document.getElementById("section").style = "opacity: 0;" 
- document.getElementById("section").innerHTML = "<h1 style='text-align: center; overflow:hidden; overflow-y:hidden;'>Scattergories</h1><center><iframe src='https://boardgames.glitch.me' width='1000px' height='500px' style='margin: 0;'></iframe></center>"
-//Style
-document.getElementById("web").style = "background-color: #109c3f;"
-document.getElementById("section").style = " opacity: 1; transition:all 1s ease;"
-document.getElementById("home").style = "background-color: 2bbd5c;"
-document.getElementById("unity").style = "background-color: 2bbd5c;"
+      float: none;
+    }
 
-}
-function unity() {
-  document.getElementById("section").style = " opacity: 0;"
+    p a:visited {
+      color: #2bbd5c;
+    }
+  </style>
 
-    document.getElementById("section").innerHTML = "<h1 style='text-align: center;'>Check back soon for <em style='text-decoration: underline;'>"+document.getElementById('unity').innerText +"</em>.</h1>"
-   
-// Style
-    document.getElementById("unity").style = "background-color: #109c3f;"
-    document.getElementById("section").style = " opacity: 1; transition:all 1s ease;"
-    document.getElementById("home").style = "background-color: 2bbd5c;"
-document.getElementById("web").style = "background-color: 2bbd5c;"
-}
+  <script>
+    function home() {
+      //Style
+      document.getElementById("web").style = "background-color: 2bbd5c;"
+      document.getElementById("unity").style = "background-color: 2bbd5c;"
+      document.getElementById("home").style = "background-color: #109c3f;"
+    }
+    function web() {
+      //Style
+      document.getElementById("web").style = "background-color: #109c3f;"
+      document.getElementById("home").style = "background-color: 2bbd5c;"
+      document.getElementById("unity").style = "background-color: 2bbd5c;"
+    }
+    function unity() {
+      // Style
+      document.getElementById("unity").style = "background-color: #109c3f;"
+      document.getElementById("home").style = "background-color: 2bbd5c;"
+      document.getElementById("web").style = "background-color: 2bbd5c;"
+    }
 
 
 
-</script>
+  </script>
 </body>
+
 </html>
