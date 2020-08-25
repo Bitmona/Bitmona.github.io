@@ -11,9 +11,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-   
-   body {
+  html, body {
      margin: 0;
+     padding:0;
+     height: 100%;
+     overflow-x: hidden;
+   }
+   #container {
+     position: relative;
+     min-height: 100%;
    }
    html {
        font-size: 25px;
@@ -56,18 +62,34 @@ margin: 0;
 
 float: none;
 }
+section {
+  
+   padding-bottom:60px;
+}
 
+footer {
+     position: absolute;
+     
+      bottom:0;
+      width: 100%;
+      height: 50px;
+      background: #2bbd5c;
+      text-align: center;
+    line-height: 50px;
+      color: white;
+  font-size: small;
+    }
 
 </style>    
 
 </head>
     <body>
-       
+     <div id="container">
     <ul class="te" id="tes">
         <li class="ch" onclick="home()" style="float: left;"><a  class="as" id="home">Home</a></li>
         <li class="ch"  onclick="unity()" style="float: left;"><a class="as" id="unity">Unity Projects</a></li>
         <li class="ch"  onclick="web()" style="float: left;background-color: #109c3f;"><a class="as" id="web">Websites</a></li>
-        <li class="cha" id="cha" style="float: right;"><a href="https://alexbrown.org">ALEXBROWN.ORG</a></li>
+        <li class="cha" id="cha" style="float: right; padding-right: 1%"><a href="https://alexbrown.org">ALEXBROWN.ORG</a></li>
 
 
 </ul>
@@ -75,8 +97,9 @@ float: none;
     <h1 style='text-align: center; overflow:hidden; overflow-y:hidden;'>Scattergories</h1><center><iframe src='https://boardgames.glitch.me' width='1000px' height='500px' style='margin: 0; border:none;'></iframe></center>
 
 </section>
-  
+<footer>Copyright © 2020 by Alex Brown.</footer>
 
+</div>  
 <script>
 
 

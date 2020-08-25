@@ -7,15 +7,22 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
   
-    body {
-      margin: 0;
-      overflow-x: hidden;
-    }
-  
-    html {
-      font-size: 25px;
-      font-family: 'Open Sans', sans-serif;
-    }
+    html, body {
+     margin: 0;
+     padding:0;
+     height: 100%;
+     overflow-x: hidden;
+   }
+   #container {
+     position: relative;
+     min-height: 100%;
+     margin: 0;
+     padding:0;
+   }
+   html {
+       font-size: 25px;
+       font-family: 'Open Sans', sans-serif;
+   }
   
     .te {
       list-style-type: none;
@@ -61,14 +68,15 @@
     p a {
       color: #2bbd5c;
     }
+    section { 
+  padding-bottom:60px;
+}
     footer {
-      margin: 0;
-      padding: 0;
-      
-      overflow: hidden;
-      background: #2bbd5c;
-      width: 100vw;
+     position: absolute;
+      bottom:0;
+      width: 100%;
       height: 50px;
+      background: #2bbd5c;
       text-align: center;
     line-height: 50px;
       color: white;
@@ -78,7 +86,7 @@
 </head>
 
 <body onload="document.getElementById('home').style = 'background-color: #109c3f';">
-
+<div id="container">
   <ul class="te" id="tes">
     <li class="ch" onclick="home()" style="float: left;background-color: #109c3f;"><a class="as" id="home" href="/">Home</a></li>
     <li class="ch" onclick="unity()" style="float: left;"><a class="as" id="unity" href="unity">Unity Projects</a></li>
@@ -104,11 +112,10 @@
       2020 earliest.</p>
 
   </section>
-<div>
-  <footer>Copyright © 2020 by Alex Brown.</footer>
-</div>
- 
 
+  <footer>Copyright © 2020 by Alex Brown.</footer>
+
+</div>
   <script>
     function home() {
       //Style
